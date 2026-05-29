@@ -1,0 +1,67 @@
+{
+  "flowers": [
+    {
+      "id": 1,
+      "name": "Sunflower",
+      "price": "$45",
+      "category": "Luxury",
+      "image": "https://www.naturalflowers.co.in/wp-content/uploads/2024/12/sunflowers.webp"
+    },
+    {
+      "id": 2,
+      "name": "Tulip Dream",
+      "price": "$32",
+      "category": "Spring",
+      "image": "https://api.floraindia.com/upload/FrLv03RNFE1778665368342.webp"
+    },
+    {
+      "id": 3,
+      "name": "White Serenity",
+      "price": "$51",
+      "category": "Wedding",
+      "image": "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?q=80&w=1200&auto=format&fit=crop"
+    },
+    {
+      "id": 4,
+      "name": "Blue Orchids",
+      "price": "$29",
+      "category": "Luxury",
+      "image": "https://luvflowercake.com/wp-content/uploads/2023/08/1-141.png"
+    },
+    {
+      "id": 5,
+      "name": "Pink Tulip",
+      "price": "$39",
+      "category": "Romantic",
+      "image": "https://gulmahal.in/wp-content/uploads/2025/03/FLORA-Pink-Tulip-Bouquet-2-bd18b823.png.webp"
+    },
+    {
+      "id": 6,
+      "name": "Lilly",
+      "price": "$42",
+      "category": "Minimal",
+      "image": "https://freshknots.in/wp-content/uploads/2026/02/46.jpg"
+    },
+     {
+      "id": 7,
+      "name": "Pink Roses",
+      "price": "$50",
+      "category": "Minimal",
+      "image": "https://www.nikkiflower.com/assets/uploads/product_image/2055/1770216363_0.jpg"
+    },
+     {
+      "id": 8,
+      "name": "Dahila",
+      "price": "$70",
+      "category": "Bridal",
+      "image": "https://media-api.xogrp.com/images/859d97ae-e2b2-4b61-8201-35aa10826d1e~rs_768.h-cr_61.0.1033.729"
+    },
+     {
+      "id": 9,
+      "name": "Daffodil",
+      "price": "$70",
+      "category": "Luxury",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx0PQbS-rXMYu3y2FpPKp3bpe42PLepHR0eg&s"
+    }
+  ]
+}
