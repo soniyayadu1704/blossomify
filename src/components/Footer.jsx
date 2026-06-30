@@ -4,24 +4,19 @@ export default function Footer() {
       id="footer"
       className="
       relative
-
-      min-h-[85vh]
-
+      min-h-[30vh]
       overflow-hidden
-
       bg-[#d9c7b8]
     "
     >
-      {/* MAIN BACKGROUND */}
+      {/* BACKGROUND */}
       <div
         className="
         absolute
         inset-0
-
         bg-cover
         bg-center
-
-        opacity-30
+        opacity-25
         scale-110
       "
         style={{
@@ -30,56 +25,22 @@ export default function Footer() {
         }}
       />
 
-      {/* EXTRA BLUR LAYER */}
       <div
         className="
         absolute
         inset-0
-
-        backdrop-blur-[6px]
-
+        backdrop-blur-[4px]
         bg-[#b9987f]/40
       "
       />
 
-      {/* FLOWER IMAGE */}
-      <div
-        className="
-        absolute
-
-        bottom-0
-        right-0
-
-        w-[500px]
-        md:w-[700px]
-
-        opacity-90
-
-        blur-[3px]
-      "
-      >
-        <img
-          src="https://t3.ftcdn.net/jpg/19/06/67/36/360_F_1906673629_66NSxZp6BqEnyslkjuKbFjDCuo1kNe4c.jpg"
-          alt=""
-          className="
-          w-full
-
-          object-cover
-
-          mask-image
-        "
-        />
-      </div>
-
-      {/* DARK SOFT OVERLAY */}
       <div
         className="
         absolute
         inset-0
-
         bg-gradient-to-t
-        from-black/50
-        via-black/20
+        from-black/40
+        via-black/10
         to-transparent
       "
       />
@@ -90,16 +51,15 @@ export default function Footer() {
         relative
         z-20
 
-        h-full
+        px-5
+        md:px-12
+
+        py-8
 
         flex
         flex-col
-        justify-between
 
-        px-8
-        md:px-16
-
-        py-14
+        gap-6
       "
       >
         {/* TOP */}
@@ -110,40 +70,30 @@ export default function Footer() {
           md:flex-row
 
           justify-between
-          items-start
-
-          gap-10
+          gap-6
         "
         >
-          {/* LEFT */}
           <div>
             <p
               className="
               uppercase
               tracking-[0.35em]
-
               text-white/60
-
-              text-sm
-
-              mb-6
+              text-xs
+              mb-3
             "
             >
-              Bloosomify
+              BLOSSOMIFY
             </p>
 
             <h2
               className="
               text-white
-
-              text-5xl
-              md:text-7xl
-
-              leading-[1]
-
+              text-3xl
+              md:text-5xl
+              leading-none
               font-light
-
-              max-w-3xl
+              max-w-2xl
             "
               style={{
                 fontFamily: "Cormorant Garamond",
@@ -153,36 +103,28 @@ export default function Footer() {
             </h2>
           </div>
 
-          {/* RIGHT */}
           <div
             className="
             max-w-md
-
             text-white/70
-
             leading-relaxed
-            text-lg
+            text-base
           "
           >
             Blossomify crafts timeless floral experiences designed to celebrate
-            love, beauty, and unforgettable moments with elegance.
+            love, beauty and unforgettable moments.
           </div>
         </div>
 
         {/* CENTER */}
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center">
           <h1
             className="
-            text-pink/90
-
-            text-6xl
-            md:text-[140px]
-
+            text-white/80
+            text-4xl
+            md:text-[90px]
             italic
-
-            tracking-wide
-
-            drop-shadow-[0_10px_40px_rgba(0,0,0,0.4)]
+            leading-none
           "
             style={{
               fontFamily: "Playfair Display",
@@ -201,22 +143,20 @@ export default function Footer() {
 
           justify-between
           items-start
-          md:items-end
+          md:items-center
 
-          gap-10
-
-          mt-10
+          gap-6
         "
         >
-          {/* LINKS */}
           <div
             className="
             flex
-            gap-8
+            flex-wrap
+            gap-5
 
             text-white/80
+            text-xs
 
-            text-sm
             uppercase
             tracking-[0.2em]
           "
@@ -227,13 +167,12 @@ export default function Footer() {
             <a href="#">Pinterest</a>
           </div>
 
-          {/* EMAIL */}
           <div>
             <p
               className="
               text-white/60
-              mb-4
-              text-sm
+              mb-2
+              text-xs
               uppercase
               tracking-[0.25em]
             "
@@ -247,14 +186,12 @@ export default function Footer() {
               items-center
 
               bg-white/10
-
-              backdrop-blur-2xl
+              backdrop-blur-xl
 
               border
               border-white/20
 
               rounded-full
-
               overflow-hidden
             "
             >
@@ -263,32 +200,29 @@ export default function Footer() {
                 placeholder="Email sign up..."
                 className="
                 bg-transparent
-
-                px-6
-                py-4
+                px-5
+                py-3
 
                 outline-none
-
                 text-white
 
                 placeholder:text-white/50
 
-                w-[260px]
+                w-[220px]
               "
               />
 
               <button
                 className="
-                h-[52px]
-                w-[52px]
+                h-[44px]
+                w-[44px]
 
                 rounded-full
 
                 bg-white
-
                 text-black
 
-                text-2xl
+                text-xl
 
                 flex
                 items-center

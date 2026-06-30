@@ -4,40 +4,34 @@ export default function FlowerViewer() {
   return (
     <section
       id="viewer"
-
       className="
-      min-h-screen
-
+      min-h-[75vh]
       bg-[#ebe6dc]
-
+      overflow-hidden
       flex
       items-center
-
-      px-6
-      md:px-10
-
-      overflow-hidden
     "
     >
       <div
         className="
-        max-w-7xl
-        mx-auto
         w-full
 
         grid
-        md:grid-cols-2
+        lg:grid-cols-[45%_55%]
 
         items-center
-        gap-16
+
+        px-6
+        md:px-12
+        xl:px-20
       "
       >
-        {/* LEFT SIDE */}
-        <div>
+        {/* LEFT CONTENT */}
+        <div className="z-20 py-10">
           <p
             className="
             uppercase
-            tracking-[0.3em]
+            tracking-[0.35em]
             text-black/40
             mb-6
           "
@@ -49,145 +43,130 @@ export default function FlowerViewer() {
             className="
             text-5xl
             md:text-7xl
-            leading-[1]
+            leading-[0.9]
             font-light
           "
           >
-            Send your{" "}
+            Send your
+
             <span
               className="
+              block
               text-pink-400
               italic
               font-serif
             "
             >
               flowers
-            </span>{" "}
+            </span>
+
             like you mean it.
           </h2>
 
           <p
             className="
-            mt-10
+            mt-8
             text-black/60
-            leading-relaxed
             text-lg
+            leading-relaxed
             max-w-xl
           "
           >
             Flowers are meant to create memories for your loved ones with
-            timeless elegance and handcrafted beauty.
+            timeless elegance, handcrafted beauty and unforgettable floral
+            experiences.
           </p>
 
-          {/* BUTTON */}
-          <Link to="/create-bouquet">
-            <button
-              className="
-              mt-12
+          <div className="mt-16">
+            <Link to="/create-bouquet">
+              <button
+                className="
+                group
 
-              px-8
-              py-5
+                px-10
+                py-5
 
-              rounded-full
+                rounded-full
 
-              bg-white/20
+                bg-white
 
-              backdrop-blur-2xl
+                shadow-[0_20px_50px_rgba(0,0,0,0.12)]
 
-              border
-              border-white/30
+                hover:-translate-y-1
+                hover:shadow-[0_25px_60px_rgba(0,0,0,0.18)]
 
-              shadow-[0_10px_40px_rgba(0,0,0,0.12)]
+                transition-all
+                duration-500
+              "
+              >
+                <span
+                  className="
+                  flex
+                  items-center
+                  gap-4
+                  text-lg
+                "
+                >
+                  Create Bouquet
 
-              hover:scale-105
-              transition
-
-              text-black
-              text-lg
-            "
-            >
-              Create Bouquet
-            </button>
-          </Link>
+                  <span
+                    className="
+                    group-hover:translate-x-2
+                    transition
+                  "
+                  >
+                    →
+                  </span>
+                </span>
+              </button>
+            </Link>
+          </div>
         </div>
 
-        {/* RIGHT SIDE */}
+        {/* RIGHT IMAGE */}
         <div
           className="
-  relative
-
-  flex
-  justify-end
-  items-end
-
-  h-[700px]
-  w-full
-
-  overflow-hidden
-"
+          relative
+          h-[520px]
+        "
         >
-          {/* SOFT GLOW */}
+          {/* GLOW */}
           <div
             className="
-    absolute
+            absolute
 
-    bottom-0
-    right-0
+            bottom-0
+            right-[-100px]
 
-    h-[500px]
-    w-[500px]
+            w-[420px]
+            h-[420px]
 
-    rounded-full
+            rounded-full
 
-    bg-pink-300/30
+            bg-pink-300/40
 
-    blur-[140px]
-  "
-          />
-
-          {/* GRADIENT LIGHT */}
-          <div
-            className="
-    absolute
-
-    bottom-[-100px]
-    right-[-100px]
-
-    h-[600px]
-    w-[600px]
-
-    rounded-full
-
-    bg-gradient-to-tr
-    from-pink-200/40
-    to-transparent
-
-    blur-[80px]
-  "
+            blur-[120px]
+          "
           />
 
           {/* FLOWER IMAGE */}
           <img
             src="https://png.pngtree.com/png-vector/20250117/ourmid/pngtree-a-bouquet-of-purple-tulips-mother-cultured-encouragement-png-image_15253426.png"
-            alt=""
+            alt="Bouquet"
             className="
-    relative
-    z-10
+            absolute
 
-    w-[620px]
-    md:w-[760px]
+           -bottom-15
+            right-[-180px]
 
-    object-contain
+            w-[760px]
 
-   translate-x-1
-    translate-y-1
+            max-w-none
 
-    drop-shadow-[0_40px_120px_rgba(0,0,0,0.18)]
+            object-contain
 
-    animate-[float_6s_ease-in-out_infinite]
-
-    mix-blend-multiply
-  "
+            drop-shadow-[0_40px_100px_rgba(0,0,0,0.15)]
+          "
           />
         </div>
       </div>

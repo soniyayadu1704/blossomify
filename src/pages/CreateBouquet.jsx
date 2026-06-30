@@ -1,52 +1,63 @@
+import { useState } from "react";
+import CreateBouquetNavbar from "../components/CreateBouquetNavbar";
+import BouquetBuilder from "../components/BouquetBuilder";
+import PriceCard from "../components/PriceCard";
+import BouquetGallery from "../components/BouquetGallery";
+import Footer from "../components/Footer";
+
 export default function CreateBouquet() {
+  const [selectedSize, setSelectedSize] = useState(null);
+  const [selectedFlower, setSelectedFlower] = useState(null);
+  const [selectedWrap, setSelectedWrap] = useState(null);
+  const [selectedCard, setSelectedCard] = useState(null);
+  const [message, setMessage] = useState("");
+
+  const total =
+    (selectedSize?.price || 0) +
+    (selectedFlower?.price || 0) +
+    (selectedWrap?.price || 0);
+
   return (
-    <section
-      className="
-      min-h-screen
-      bg-[#ebe6dc]
+    <div className="bg-[#FFF1F3] min-h-screen">
+      <CreateBouquetNavbar />
 
-      flex
-      items-center
-      justify-center
+      <section className="max-w-[1400px] mx-auto px-5 py-8">
+        <div className="grid lg:grid-cols-[1.2fr_.9fr] gap-6">
 
-      px-6
-    "
-    >
-      <div className="text-center">
-        <p
-          className="
-          uppercase
-          tracking-[0.3em]
-          text-black/50
-          mb-6
-        "
-        >
-          Custom Floral Experience
-        </p>
+          <BouquetBuilder
+            selectedSize={selectedSize}
+            setSelectedSize={setSelectedSize}
+            selectedFlower={selectedFlower}
+            setSelectedFlower={setSelectedFlower}
+            selectedWrap={selectedWrap}
+            setSelectedWrap={setSelectedWrap}
+            selectedCard={selectedCard}
+            setSelectedCard={setSelectedCard}
+          />
 
-        <h1
-          className="
-          text-6xl
-          md:text-8xl
-          font-light
-        "
-        >
-          Create Your Bouquet
-        </h1>
+          <div className="space-y-6">
 
-        <p
-          className="
-          mt-8
-          text-black/60
-          max-w-2xl
-          leading-relaxed
-          mx-auto
-        "
-        >
-          Design floral arrangements beautifully crafted for unforgettable
-          moments and luxury gifting.
-        </p>
-      </div>
-    </section>
+            <PriceCard
+              total={total}
+              message={message}
+              setMessage={setMessage}
+              reset={() => {
+                setSelectedSize(null);
+                setSelectedFlower(null);
+                setSelectedWrap(null);
+                setSelectedCard(null);
+                setMessage("");
+              }}
+            />
+
+            <BouquetGallery />
+
+          </div>
+
+        </div>
+      </section>
+
+      <Footer />
+    </div>
   );
 }

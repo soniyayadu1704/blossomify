@@ -7,16 +7,23 @@ export default function ProductCard({
       className="
       bg-white/70
       backdrop-blur-xl
+
       rounded-[30px]
+
       overflow-hidden
+
       shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+
+      hover:-translate-y-2
+      transition-all
+      duration-500
     "
     >
       <img
         src={flower.image}
-        alt=""
+        alt={flower.name}
         className="
-        h-[350px]
+        h-[320px]
         w-full
         object-cover
       "
@@ -24,7 +31,7 @@ export default function ProductCard({
 
       <div className="p-6">
         <p className="text-black/50">
-          {flower.category}
+          {flower.category || "Flower"}
         </p>
 
         <h3
@@ -42,26 +49,33 @@ export default function ProductCard({
           flex
           items-center
           justify-between
+
           mt-6
         "
         >
-          <p>{flower.price}</p>
+          <p className="font-medium">
+            ${flower.price}
+          </p>
 
           <button
             onClick={() =>
-              setSelectedFlower(flower)
+              setSelectedFlower?.(flower)
             }
             className="
             px-5
             py-3
+
             rounded-full
+
             bg-black
             text-white
+
             hover:scale-105
+
             transition
           "
           >
-            View 360°
+            View
           </button>
         </div>
       </div>
